@@ -1,0 +1,48 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "orchestrator",
+  "agents": {
+    "orchestrator": {
+      "mode": "primary",
+      "description": "Coordinates Flutter work through specialist subagents and enforces quality gates.",
+      "steps": 40,
+      "permissions": [
+        {
+          "action": "subagent",
+          "resource": "*",
+          "effect": "deny"
+        },
+        {
+          "action": "subagent",
+          "resource": "project-scout",
+          "effect": "allow"
+        },
+        {
+          "action": "subagent",
+          "resource": "flutter-engineer",
+          "effect": "allow"
+        },
+        {
+          "action": "subagent",
+          "resource": "api-contract",
+          "effect": "allow"
+        },
+        {
+          "action": "subagent",
+          "resource": "ui-reviewer",
+          "effect": "allow"
+        },
+        {
+          "action": "subagent",
+          "resource": "qa-engineer",
+          "effect": "allow"
+        },
+        {
+          "action": "subagent",
+          "resource": "security-reviewer",
+          "effect": "allow"
+        }
+      ]
+    }
+  }
+}

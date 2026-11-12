@@ -1,0 +1,10 @@
+# Add these entries to the project's existing .gitignore if not already present.
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+key.properties
+android/key.properties
+ios/Runner/*.mobileprovision
+ios/Runner/*.p12
